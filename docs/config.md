@@ -1,7 +1,7 @@
 ---
 layout: default
-title: My New Section
-nav_order: 3
+title: Feature Detection
+nav_order: 2
 ---
 
 # My New Section
