@@ -1,4 +1,4 @@
-# just-the-docs-template
+# PINTS - Pipelines in Non-Target Screening 
 
 This is a *bare-minimum* template to create a [Jekyll] site that:
 
