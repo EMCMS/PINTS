@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Componentization
+title: Example Pipelines
 nav_order: 7
 has_children: false
 ---
