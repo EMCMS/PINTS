@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Feature Detection
+title: Pipelines 
 nav_order: 2
 ---
 

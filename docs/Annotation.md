@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Feature Detection
-nav_order: 3
+title: Componentization
+nav_order: 6
 has_children: false
 ---
 

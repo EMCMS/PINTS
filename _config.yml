@@ -7,4 +7,7 @@ url: https://EMCMS.github.io/PINTS
 aux_links:
   Template Repository: https://github.com/EMCMS/PINTS
 
-logo: "/assets/images/Logo.png"
+# Custom logo HTML to include an image alongside the site title
+logo_html: |
+  <img src="/assets/images/Logo.png" alt="PINTS Logo" style="height: 40px; width: auto; margin-right: 10px;">
+  PINTS Hub
