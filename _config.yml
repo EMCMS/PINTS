@@ -9,4 +9,4 @@ aux_links:
 
 # Custom logo HTML to include an image alongside the site title
 # In _config.yml
-logo : "<img src='/assets/images/Logo.png' alt='Logo' style='height: 40px; margin-right: 10px;'/>"
+logo : "/assets/images/logo.png"
