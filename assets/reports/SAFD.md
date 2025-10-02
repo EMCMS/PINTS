@@ -7,7 +7,7 @@
 | Parameter | Value | Description |
 | :--- | :--- | :--- |
 | **Algorithm** | **SAFD** (Self-Adjusting Feature Detection) | Highly generic algorithm fitting a 3D Gaussian model. |
-| **SAFD Version** | 0.8.2 (Julia 1.11) | Version of the algorithm used for testing. |
+| **SAFD Version** | [0.8.2](https://bitbucket.org/SSamanipour/safd.jl/src/master/) ([Julia 1.11](https://julialang.org/downloads/)) | Version of the algorithm used for testing. |
 | **Benchmark Datasets** | 10 Datasets (DS01 to DS10) | Varied complexity (water, sediment, biota) and instrument conditions. |
 | **Ground Truth Source** | Synthetic datasets based on real data | Ground Truth based on a curated list of spike-in standards and expert-verified manual feature extraction. |
 | **Feature Matching Criteria** | $\Delta$m/z $\le$ 3 ppm AND $\Delta$RT $\le$ 0.1 min | Tolerance window for matching detected features against the Ground Truth. |

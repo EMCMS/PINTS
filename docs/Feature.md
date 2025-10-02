@@ -45,7 +45,7 @@ This page provides a quick reference for popular open-source software packages a
 The **Allotrope Foundation Ontology (AFO)** and the **Allotrope Simple Model (ASM)** define a standardized, semantic vocabulary for analytical data, ensuring interoperability between software tools. The key input and output parameters used in feature detection are formally defined within this framework. It should be noted that these Property are by no means exhustive and we invite the developers to to contribute to this list.
 
 | Property | Semantic Term (Allotrope Context) | Property Role | Units | Description | 
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- |
 | ID | **Mass to Charge Ratio at the Start** | **Additional** output | Da | The m/z value at the strat of the detected and integrated peak. |
 | mz | **Mass to Charge Ratio** | **Essential** output | Da | The measured value of the mass of an ion divided by its charge measured either at the top of mass peak or an aneraged value over the full feature. |
 | rt | **Retention Time** | **Essential** output | s (seconds) | The time interval from the start of the chromatographic run to the point of maximum peak intensity of the detected feature. |
