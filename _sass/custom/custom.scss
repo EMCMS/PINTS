@@ -1,0 +1,13 @@
+// _sass/custom/custom.scss
+
+.side-bar {
+  // Override for medium screens (e.g., tablets and desktop)
+  @media (min-width: 768px) {
+    width: 200px; /* Adjust this to your desired smaller width */
+  }
+
+  // You might also need to adjust the width for very large screens
+  @media (min-width: 1200px) {
+    width: 250px; /* Adjust this if you need a different width for large monitors */
+  }
+}
