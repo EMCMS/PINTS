@@ -9,11 +9,11 @@ nav_order: 1
 
 The **PINTS Hub** provides a centralized, go-to location for the latest developments in Non-Target Screening (NTS) workflows for both developers and users. Our core mission is to promote the **standardization of NTS workflows** by moving the field from relying on single, often manual, algorithms to fully integrated and automated pipelines.
 
-![Logo](https://github.com/EMCMS/PINTS/blob/main/assets/images/Logo.png?raw=true)
+<img src="https://github.com/EMCMS/PINTS/blob/main/assets/images/Logo.png" width="200"/>
 
 ---
 
-## Core Principles of the PINTS Solution
+## Core Principles of the PINTS initiative
 
 The hub is designed to minimize human intervention and maximize efficiency in NTS research. The key characteristics of the PINTS solution include:
 
