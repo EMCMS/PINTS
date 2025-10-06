@@ -70,14 +70,14 @@ Here you can find example outputs files in [JSON](https://github.com/EMCMS/PINTS
   "schema_version": "Draft 07",
   
   "processing_info": {
-    "software": "SAFD (Simulated Analytical Feature Detector)",
-    "version": "1.5.0",
+    "software": "SAFD (Self adjusting feature detection algorithm)",
+    "version": "0.8.3",
     "parameters": {
-      "mass_tolerance_ppm": 3.5,
-      "min_intensity_counts": 10000,
-      "snr_threshold": 5.0,
-      "peak_shape_model": "Voigt",
-      "max_rt_variation_sec": 0.05
+      "maximum_iteration": 20000,
+      "resolution": 20000,
+      "s2n": 2,
+      "R_thresh": 0.75,
+      "Min_intensity": 1000
     }
   },
   
@@ -156,6 +156,18 @@ Here you can find example outputs files in [JSON](https://github.com/EMCMS/PINTS
           "type": "number",
           "description": "Measured Resolution of the chromatographic peak (Additional Output). Unit: NA.",
           "minimum": 0
+        },
+        "prio": {
+          "type": "integer",
+          "description": "Prioritization status (0: Not Prioritized, 1: Prioritized).",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Q_p": {
+          "type": "number",
+          "description": "Quality of Prioritization (Score reflecting certainty/confidence of prioritization).",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "additionalProperties": false
@@ -176,7 +188,7 @@ Here you can find example outputs files in [JSON](https://github.com/EMCMS/PINTS
       "PWMD": 0.0012,
       "PWTD": 0.14,
       "Q": 0.98,
-      "Rs": 15.5
+      "Rs": 23000
     },
     {
       "ID": 2,
@@ -191,7 +203,7 @@ Here you can find example outputs files in [JSON](https://github.com/EMCMS/PINTS
       "PWMD": 0.0012,
       "PWTD": 0.19,
       "Q": 0.95,
-      "Rs": 12.1
+      "Rs": 34800
     },
     {
       "ID": 3,
@@ -206,51 +218,9 @@ Here you can find example outputs files in [JSON](https://github.com/EMCMS/PINTS
       "PWMD": 0.0010,
       "PWTD": 0.10,
       "Q": 0.89,
-      "Rs": 20.9
+      "Rs": 29000
     }
   ]
-}
-
-
-
-``` 
-```json 
-{
-  "file_description": "Metadata for Feature Detection Batch.",
-  "schema_version": "Draft 07",
-
-  "processing_info": {
-    "software": "SAFD (Self adjusting feature detection algorithm)",
-    "version": "0.8.3",
-    "parameters": {
-      "maximum_iteration": 20000,
-      "resolution": 20000,
-      "s2n": 2,
-      "R_thresh": 0.75,
-      "Min_intensity": 1000
-    }
-  },
-
-  "batch_info": {
-    "batch_id": "LCMS_Batch_20251006_A",
-    "input_files": [
-      {
-        "file_name": "sample_A_neg.mzML",
-        "path": "/data/raw/lcms/2025/sample_A_neg.mzML",
-        "hash": "sha256:a1b2c3d4e5f6..."
-      },
-      {
-        "file_name": "sample_B_neg.mzML",
-        "path": "/data/raw/lcms/2025/sample_B_neg.mzML",
-        "hash": "sha256:f6e5d4c3b2a1..."
-      }
-    ],
-    "output_file": {
-      "file_name": "features_20251006_A.csv",
-      "path": "/data/processed/features_20251006_A.csv"
-    },
-    "date_processed": "2025-10-06T09:00:00Z"
-  }
 }
 
 ``` 
