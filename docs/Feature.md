@@ -46,7 +46,7 @@ The **Allotrope Foundation Ontology (AFO)** and the **Allotrope Simple Model (AS
 
 | Property | Semantic Term (Allotrope Context) | Property Role | Units | Description | 
 | :--- | :--- | :--- | :--- | :--- |
-| ID | **Mass to Charge Ratio at the Start** | **Additional** output | Da | The m/z value at the strat of the detected and integrated peak. |
+| ID | **Feature ID** | **Essential** output | Da | The m/z value at the strat of the detected and integrated peak. |
 | mz | **Mass to Charge Ratio** | **Essential** output | Da | The measured value of the mass of an ion divided by its charge measured either at the top of mass peak or an aneraged value over the full feature. |
 | rt | **Retention Time** | **Essential** output | s (seconds) | The time interval from the start of the chromatographic run to the point of maximum peak intensity of the detected feature. |
 | Int | **Peak Intensity** | **Essential** output | Counts | The peak intensity in the time domain recorded either at the maximum of measured EIC or at the top of fitted peak. |
@@ -64,7 +64,197 @@ The **Allotrope Foundation Ontology (AFO)** and the **Allotrope Simple Model (AS
 
 Here you can find example outputs files in [JSON](https://github.com/EMCMS/PINTS/blob/main/assets/example_files/json_examp.json) and [CSV](https://github.com/EMCMS/PINTS/blob/main/assets/example_files/csv_examp.csv) formats. These files are meant to be used for the developers to generate their output files. 
 
-![JSON File](https://github.com/EMCMS/PINTS/blob/main/assets/images/JSON.png?raw=true)
+```json 
+{
+  "file_description": "LC-HRMS Feature Detection Output from SAFD.",
+  "schema_version": "Draft 07",
+  
+  "processing_info": {
+    "software": "SAFD (Simulated Analytical Feature Detector)",
+    "version": "1.5.0",
+    "parameters": {
+      "mass_tolerance_ppm": 3.5,
+      "min_intensity_counts": 10000,
+      "snr_threshold": 5.0,
+      "peak_shape_model": "Voigt",
+      "max_rt_variation_sec": 0.05
+    }
+  },
+  
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/ms_feature_array.json",
+    "title": "LC-HRMS Feature Detection Output (Allotrope Semantic Basis)",
+    "description": "An array of detected LC-HRMS features, structured using parameters aligned with the Allotrope Simple Model (ASM) context.",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": ["ID", "mz", "rt", "Int", "Area"],
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "description": "Unique identifier for the detected feature (Peak ID).",
+          "minimum": 1
+        },
+        "mz": {
+          "type": "number",
+          "description": "Mass to Charge Ratio (Essential Output). Unit: Da.",
+          "minimum": 0
+        },
+        "rt": {
+          "type": "number",
+          "description": "Retention Time (Essential Output). Unit: s.",
+          "minimum": 0
+        },
+        "Int": {
+          "type": "integer",
+          "description": "Peak Intensity (Essential Output). Unit: Counts.",
+          "minimum": 0
+        },
+        "Area": {
+          "type": "integer",
+          "description": "Peak Area (Essential Output). Unit: NA.",
+          "minimum": 0
+        },
+        "mz_s": {
+          "type": "number",
+          "description": "Mass to Charge Ratio at the Start (Additional Output). Unit: Da.",
+          "minimum": 0
+        },
+        "mz_e": {
+          "type": "number",
+          "description": "Mass to Charge Ratio at the End (Additional Output). Unit: Da.",
+          "minimum": 0
+        },
+        "rt_s": {
+          "type": "number",
+          "description": "Retention time at the Start (Additional Output). Unit: s.",
+          "minimum": 0
+        },
+        "rt_e": {
+          "type": "number",
+          "description": "Retention time at the End (Additional Output). Unit: s.",
+          "minimum": 0
+        },
+        "PWMD": {
+          "type": "number",
+          "description": "Peak Width in Mass Domain (Additional Output). Unit: Da.",
+          "minimum": 0
+        },
+        "PWTD": {
+          "type": "number",
+          "description": "Peak Width in Time Domain (Additional Output). Unit: s.",
+          "minimum": 0
+        },
+        "Q": {
+          "type": "number",
+          "description": "Quality Measure (Additional Output). Specifically, the R^2 fit of the peak model.",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Rs": {
+          "type": "number",
+          "description": "Measured Resolution of the chromatographic peak (Additional Output). Unit: NA.",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  
+  "data": [
+    {
+      "ID": 1,
+      "mz": 301.0705,
+      "rt": 4.52,
+      "Int": 85000,
+      "Area": 1250000,
+      "mz_s": 301.0699,
+      "mz_e": 301.0711,
+      "rt_s": 4.45,
+      "rt_e": 4.59,
+      "PWMD": 0.0012,
+      "PWTD": 0.14,
+      "Q": 0.98,
+      "Rs": 15.5
+    },
+    {
+      "ID": 2,
+      "mz": 450.1234,
+      "rt": 8.11,
+      "Int": 150000,
+      "Area": 2800000,
+      "mz_s": 450.1228,
+      "mz_e": 450.1240,
+      "rt_s": 8.02,
+      "rt_e": 8.21,
+      "PWMD": 0.0012,
+      "PWTD": 0.19,
+      "Q": 0.95,
+      "Rs": 12.1
+    },
+    {
+      "ID": 3,
+      "mz": 155.0501,
+      "rt": 2.90,
+      "Int": 25000,
+      "Area": 300000,
+      "mz_s": 155.0496,
+      "mz_e": 155.0506,
+      "rt_s": 2.85,
+      "rt_e": 2.95,
+      "PWMD": 0.0010,
+      "PWTD": 0.10,
+      "Q": 0.89,
+      "Rs": 20.9
+    }
+  ]
+}
+
+
+
+``` 
+```json 
+{
+  "file_description": "Metadata for Feature Detection Batch.",
+  "schema_version": "Draft 07",
+
+  "processing_info": {
+    "software": "SAFD (Self adjusting feature detection algorithm)",
+    "version": "0.8.3",
+    "parameters": {
+      "maximum_iteration": 20000,
+      "resolution": 20000,
+      "s2n": 2,
+      "R_thresh": 0.75,
+      "Min_intensity": 1000
+    }
+  },
+
+  "batch_info": {
+    "batch_id": "LCMS_Batch_20251006_A",
+    "input_files": [
+      {
+        "file_name": "sample_A_neg.mzML",
+        "path": "/data/raw/lcms/2025/sample_A_neg.mzML",
+        "hash": "sha256:a1b2c3d4e5f6..."
+      },
+      {
+        "file_name": "sample_B_neg.mzML",
+        "path": "/data/raw/lcms/2025/sample_B_neg.mzML",
+        "hash": "sha256:f6e5d4c3b2a1..."
+      }
+    ],
+    "output_file": {
+      "file_name": "features_20251006_A.csv",
+      "path": "/data/processed/features_20251006_A.csv"
+    },
+    "date_processed": "2025-10-06T09:00:00Z"
+  }
+}
+
+``` 
+
 
 ![CSV File](https://github.com/EMCMS/PINTS/blob/main/assets/images/CSV.png?raw=true)
 

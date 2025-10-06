@@ -1,125 +1,152 @@
-{
-  "file_description": "Combined JSON Schema and Example Data for LC-HRMS Feature Detection Output.",
-  "schema_version": "Draft 07",
-  
-  "schema": {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://example.com/ms_feature_array.json",
-    "title": "LC-HRMS Feature Detection Output (Allotrope Semantic Basis)",
-    "description": "An array of detected LC-HRMS features, structured using parameters aligned with the Allotrope Simple Model (ASM) context.",
-    "type": "array",
-    "items": {
-      "type": "object",
-      "required": ["ID", "mz", "rt", "Int", "Area"],
-      "properties": {
-        "ID": {
-          "type": "integer",
-          "description": "Unique identifier for the detected feature (Peak ID).",
-          "minimum": 1
-        },
-        "mz": {
-          "type": "number",
-          "description": "Mass to Charge Ratio (Essential Output). Unit: Da.",
-          "minimum": 0
-        },
-        "rt": {
-          "type": "number",
-          "description": "Retention Time (Essential Output). Unit: s.",
-          "minimum": 0
-        },
-        "Int": {
-          "type": "integer",
-          "description": "Peak Intensity (Essential Output). Unit: Counts.",
-          "minimum": 0
-        },
-        "Area": {
-          "type": "integer",
-          "description": "Peak Area (Essential Output). Unit: NA.",
-          "minimum": 0
-        },
-        "mz_s": {
-          "type": "number",
-          "description": "Mass to Charge Ratio at the Start (Additional Output). Unit: Da.",
-          "minimum": 0
-        },
-        "mz_e": {
-          "type": "number",
-          "description": "Mass to Charge Ratio at the End (Additional Output). Unit: Da.",
-          "minimum": 0
-        },
-        "rt_s": {
-          "type": "number",
-          "description": "Retention time at the Start (Additional Output). Unit: s.",
-          "minimum": 0
-        },
-        "rt_e": {
-          "type": "number",
-          "description": "Retention time at the End (Additional Output). Unit: s.",
-          "minimum": 0
-        },
-        "PWMD": {
-          "type": "number",
-          "description": "Peak Width in Mass Domain (Additional Output). Unit: Da.",
-          "minimum": 0
-        },
-        "PWTD": {
-          "type": "number",
-          "description": "Peak Width in Time Domain (Additional Output). Unit: s.",
-          "minimum": 0
-        },
-        "Q": {
-          "type": "number",
-          "description": "Quality Measure (Additional Output). e.g., R^2 fit or QPeak parameter.",
-          "minimum": 0,
-          "maximum": 1
-        }
-      },
-      "additionalProperties": false
-    }
-  },
-  
-  "data": [
-    {
-      "ID": 1,
-      "mz": 301.0705,
-      "rt": 4.52,
-      "Int": 85000,
-      "Area": 1250000,
-      "mz_s": 301.0699,
-      "mz_e": 301.0711,
-      "rt_s": 4.45,
-      "rt_e": 4.59,
-      "PWMD": 0.0012,
-      "PWTD": 0.14,
-      "Q": 0.98
-    },
-    {
-      "ID": 2,
-      "mz": 450.1234,
-      "rt": 8.11,
-      "Int": 150000,
-      "Area": 2800000,
-      "mz_s": 450.1228,
-      "mz_e": 450.1240,
-      "rt_s": 8.02,
-      "rt_e": 8.21,
-      "PWMD": 0.0012,
-      "PWTD": 0.19,
-      "Q": 0.95
-    },
-    {
-      "ID": 3,
-      "mz": 155.0501,
-      "rt": 2.90,
-      "Int": 25000,
-      "Area": 300000,
-      "mz_s": 155.0496,
-      "mz_e": 155.0506,
-      "rt_s": 2.85,
-      "rt_e": 2.95,
-      "PWMD": 0.0010,
-      "PWTD": 0.10,
-      "Q": 0.89
-    }
-  ]
-}
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \{\
+  "file_description": "LC-HRMS Feature Detection Output from SAFD.",\
+  "schema_version": "Draft 07",\
+  \
+  "processing_info": \{\
+    "software": "SAFD (Self adjusting feature detection algorithm)\'94,\
+    "version": \'930.8.3\'94,\
+    "parameters": \{\
+      "maximum_iteration : 20000,\
+      \'93resolution\'94: 20000,\
+      "s2\'94n: 2,\
+      \'93R_thresh\'94: 0.75,\
+      \'93Min_intensity\'94: 1000\
+    \}\
+  \},\
+  \
+  "schema": \{\
+    "$schema": "http://json-schema.org/draft-07/schema#",\
+    "$id": "http://example.com/ms_feature_array.json",\
+    "title": "LC-HRMS Feature Detection Output (Allotrope Semantic Basis)",\
+    "description": "An array of detected LC-HRMS features, structured using parameters aligned with the Allotrope Simple Model (ASM) context.",\
+    "type": "array",\
+    "items": \{\
+      "type": "object",\
+      "required": ["ID", "mz", "rt", "Int", "Area"],\
+      "properties": \{\
+        "ID": \{\
+          "type": "integer",\
+          "description": "Unique identifier for the detected feature (Peak ID).",\
+          "minimum": 1\
+        \},\
+        "mz": \{\
+          "type": "number",\
+          "description": "Mass to Charge Ratio (Essential Output). Unit: Da.",\
+          "minimum": 0\
+        \},\
+        "rt": \{\
+          "type": "number",\
+          "description": "Retention Time (Essential Output). Unit: s.",\
+          "minimum": 0\
+        \},\
+        "Int": \{\
+          "type": "integer",\
+          "description": "Peak Intensity (Essential Output). Unit: Counts.",\
+          "minimum": 0\
+        \},\
+        "Area": \{\
+          "type": "integer",\
+          "description": "Peak Area (Essential Output). Unit: NA.",\
+          "minimum": 0\
+        \},\
+        "mz_s": \{\
+          "type": "number",\
+          "description": "Mass to Charge Ratio at the Start (Additional Output). Unit: Da.",\
+          "minimum": 0\
+        \},\
+        "mz_e": \{\
+          "type": "number",\
+          "description": "Mass to Charge Ratio at the End (Additional Output). Unit: Da.",\
+          "minimum": 0\
+        \},\
+        "rt_s": \{\
+          "type": "number",\
+          "description": "Retention time at the Start (Additional Output). Unit: s.",\
+          "minimum": 0\
+        \},\
+        "rt_e": \{\
+          "type": "number",\
+          "description": "Retention time at the End (Additional Output). Unit: s.",\
+          "minimum": 0\
+        \},\
+        "PWMD": \{\
+          "type": "number",\
+          "description": "Peak Width in Mass Domain (Additional Output). Unit: Da.",\
+          "minimum": 0\
+        \},\
+        "PWTD": \{\
+          "type": "number",\
+          "description": "Peak Width in Time Domain (Additional Output). Unit: s.",\
+          "minimum": 0\
+        \},\
+        "Q": \{\
+          "type": "number",\
+          "description": "Quality Measure (Additional Output). Specifically, the R^2 fit of the peak model.",\
+          "minimum": 0,\
+          "maximum": 1\
+        \},\
+        "Rs": \{\
+          "type": "number",\
+          "description": "Measured Resolution of the mass peak (Additional Output). Unit: NA.",\
+          "minimum": 0\
+        \}\
+      \},\
+      "additionalProperties": false\
+    \}\
+  \},\
+  \
+  "data": [\
+    \{\
+      "ID": 1,\
+      "mz": 301.0705,\
+      "rt": 4.52,\
+      "Int": 85000,\
+      "Area": 1250000,\
+      "mz_s": 301.0699,\
+      "mz_e": 301.0711,\
+      "rt_s": 4.45,\
+      "rt_e": 4.59,\
+      "PWMD": 0.0012,\
+      "PWTD": 0.14,\
+      "Q": 0.98,\
+      "Rs": 25000\
+    \},\
+    \{\
+      "ID": 2,\
+      "mz": 450.1234,\
+      "rt": 8.11,\
+      "Int": 150000,\
+      "Area": 2800000,\
+      "mz_s": 450.1228,\
+      "mz_e": 450.1240,\
+      "rt_s": 8.02,\
+      "rt_e": 8.21,\
+      "PWMD": 0.0012,\
+      "PWTD": 0.19,\
+      "Q": 0.95,\
+      "Rs": 32400\
+    \},\
+    \{\
+      "ID": 3,\
+      "mz": 155.0501,\
+      "rt": 2.90,\
+      "Int": 25000,\
+      "Area": 300000,\
+      "mz_s": 155.0496,\
+      "mz_e": 155.0506,\
+      "rt_s": 2.85,\
+      "rt_e": 2.95,\
+      "PWMD": 0.0010,\
+      "PWTD": 0.10,\
+      "Q": 0.89,\
+      "Rs": 29860\
+    \}\
+  ]\
+\}}
