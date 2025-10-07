@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Annotation
-nav_order: 4
+nav_order: 6
 has_children: false
 ---
 
@@ -24,8 +24,8 @@ Typical annotation strategies include:
 
 This page provides a quick reference for open-source software packages and libraries registered in PINTS Hub for **Annotation** in Non-Targeted Screening (NTS) workflows.
 
-| Algorithm | Primary Language | Minimal Description | Discipline | Version (Latest Stable) | Open-Access Paper | License | Data Type
-| :--- | :--- | :--- | :--- | :--- |
+| Algorithm | Primary Language | Minimal Description | Discipline | Version (Latest Stable) | Open-Access Paper | License | Data Type |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 
 | **1. FluoroMatch Workflow** | R | **Automated workflow** for PFAS annotation that uses blank filtering, KMD plots, retention time pattern analysis, and exact mass matching for identification. | Metabolomics/Exposomics | 5.6 | [FluoroMatch 2.0](https://link.springer.com/article/10.1007/s00216-021-03392-7) | Unclear | Raw vendor formats |
 | **2. Universal Library Search Algorithm (ULSA)** | Julia | Performs spectral library search using a multiple parameter scoring. | Exposomics | 0.6 | [Combining...](https://pubs.acs.org/doi/10.1021/acs.est.8b00259) | MIT | components or prioritized components |
