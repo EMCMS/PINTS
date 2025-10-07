@@ -40,7 +40,7 @@ This page provides a quick reference for popular open-source software packages a
 
 # Additional Resources:
 
-## Defintions: 
+## Definitions: 
 
 The **Allotrope Foundation Ontology (AFO)** and the **Allotrope Simple Model (ASM)** define a standardized, semantic vocabulary for analytical data, ensuring interoperability between software tools. The key input and output parameters used in feature detection are formally defined within this framework. It should be noted that these Property are by no means exhustive and we invite the developers to to contribute to this list.
 

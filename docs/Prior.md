@@ -43,17 +43,15 @@ This section provides a quick reference for common software and libraries used f
 
 ---
 
-## Standardization
+# Additional Resources:
 
-Flexible Inputs and Outputs (I/O) are essential for harmonizing and standardizing offline prioritization tools. This section outlines the required and optional parameters, following a defined semantic structure.
+## Definitions: 
 
-### Standardized I/O Definitions
-
-Outputs must include a string for the prioritization category and a Boolean value for the prioritization result, ensuring excluded features are preserved. This list of properties is harmonized with the former feature detection steps for an open NTS pipeline.
+Outputs must include a string for the prioritization category and/or boolean value for the prioritization result, ensuring excluded features are preserved. This list of properties is harmonized with the former feature detection steps for an open NTS pipeline.
 
 | Property | Semantic Term (Allotrope Context) | Property Role | Units | Description | 
 | :--- | :--- | :--- | :--- | :--- |
-| prior | **Prioritization rank** | **Essential** output | NA | Either a value predicted based on a model (e.g. LC50), rank of the components, or category. |
+| prior | **Prioritization category/prediction** | **Essential** output | NA | Either a value predicted based on a model (e.g. LC50), rank of the components, or category. |
 | Qp | **Prioritization quality** | **Additional** output | NA | An uncertainty or prediction quality parameter. |
 
 ## Example Files
