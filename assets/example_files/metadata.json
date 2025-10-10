@@ -1,44 +1,37 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{
+  "file_description": "Metadata for Feature Detection Batch.",
+  "schema_version": "Draft 07",
 
-\f0\fs24 \cf0 \{\
-  "file_description": "Metadata for Feature Detection Batch.",\
-  "schema_version": "Draft 07",\
-\
-  "processing_info": \{\
-    "software": "SAFD (Self adjusting feature detection algorithm)",\
-    "version": "0.8.3",\
-    "parameters": \{\
-      "maximum_iteration": 20000,\
-      "resolution": 20000,\
-      "s2n": 2,\
-      "R_thresh": 0.75,\
-      "Min_intensity": 1000\
-    \}\
-  \},\
-\
-  "batch_info": \{\
-    "batch_id": "LCMS_Batch_20251006_A",\
-    "input_files": [\
-      \{\
-        "file_name": "sample_A_neg.mzML",\
-        "path": "/data/raw/lcms/2025/sample_A_neg.mzML",\
-        "hash": "sha256:a1b2c3d4e5f6..."\
-      \},\
-      \{\
-        "file_name": "sample_B_neg.mzML",\
-        "path": "/data/raw/lcms/2025/sample_B_neg.mzML",\
-        "hash": "sha256:f6e5d4c3b2a1..."\
-      \}\
-    ],\
-    "output_file": \{\
-      "file_name": "features_20251006_A.csv",\
-      "path": "/data/processed/features_20251006_A.csv"\
-    \},\
-    "date_processed": "2025-10-06T09:00:00Z"\
-  \}\
-\}}
+  "processing_info": {
+    "software": "SAFD (Self adjusting feature detection algorithm)",
+    "version": "0.8.3",
+    "parameters": {
+      "maximum_iteration": 20000,
+      "resolution": 20000,
+      "s2n": 2,
+      "R_thresh": 0.75,
+      "Min_intensity": 1000
+    }
+  },
+
+  "batch_info": {
+    "batch_id": "LCMS_Batch_20251006_A",
+    "input_files": [
+      {
+        "file_name": "sample_A_neg.mzML",
+        "path": "/data/raw/lcms/2025/sample_A_neg.mzML",
+        "hash": "sha256:a1b2c3d4e5f6..."
+      },
+      {
+        "file_name": "sample_B_neg.mzML",
+        "path": "/data/raw/lcms/2025/sample_B_neg.mzML",
+        "hash": "sha256:f6e5d4c3b2a1..."
+      }
+    ],
+    "output_file": {
+      "file_name": "features_20251006_A.csv",
+      "path": "/data/processed/features_20251006_A.csv"
+    },
+    "date_processed": "2025-10-06T09:00:00Z"
+  }
+}
